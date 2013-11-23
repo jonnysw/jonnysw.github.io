@@ -2,12 +2,60 @@
 
 <html>
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/panel.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js" ></script>
 	<script src="js/datagrid.js"></script>
 <body>
 
-<h1>My First Heading</h1>
 
-<p>My first paragraph.</p>
+<!-- Datagrid dialog -->
+<div id="datagrid" class="dialog">
+	<div class="dialog_header">
+		<div class="title">DataGrid Control Panel</div>
+	</div>
+	<div class="dialog_content">
+	
+		<div class="header_bar">
+			<div class="logo"><img src="img/dg_logo.png" alt="DATAGRID" height="30" width="168"></div>
+			<div class="search_box">
+				<input type="text" placeholder="Search"/>
+			</div>
+			<div class="top_links"><a href="#">FAQ</a> | <a href="#">Help</a></div>
+		</div>
+
+		<div class="nav">
+			<ul>
+				<!-- Left Nav -->
+				<li class="link"><img src="img/home.png" alt="Home" width="18"></li>
+				<li class="spacer"></li>
+				<li class="link active">Preview</li>
+				<li class="spacer"></li>
+				<li class="link">Activity</li>
+				<li class="spacer"></li>
+				<li class="link">Control</li>
+				<li class="spacer"></li>
+				<li class="link">Issue</li>
+				<li class="spacer"></li>
+				<li class="link">Overview</li>
+				<li class="spacer"></li>
+				
+				<!-- Right Nav -->
+				<li class="right link">Admin</li>
+				<li class="right spacer"></li>
+				<li class="right link">My Profile</li>
+				<li class="right spacer"></li>
+			</ul>
+		</div>
+
+		<!-- Datagrid content -->
+		<div class="content">
+			<div class="wrap_loader">
+				<div class="loader"></div>
+			</div>
+		</div>
+	
+	</div>
+</div>
 
 </body>
 </html>

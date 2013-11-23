@@ -1,0 +1,270 @@
+.dialog {
+	position:relative;
+	background-color:#f1f9ff;
+	display: inline-block;
+	min-width:700px;
+	border: 1px solid #000000;
+	border-radius:4px;
+	padding:3px;
+	padding-top:33px;
+	margin: auto;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:0.75em;
+	color: #808080
+}
+
+.dialog_header {
+	position: absolute;
+	top:0px;
+	left:0px;
+	border-bottom:1px solid #c5c5c5;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+	height:30px;
+	width:100%;
+	background-color:#e1edf4;
+	
+}
+
+.dialog_header .title {
+	position:relative;
+	padding:8px;
+	color:#363636
+}
+
+.dialog_content {
+	min-height: 200px;
+	border: 1px solid #c5c5c5;
+	border-bottom-left-radius:2px;
+	border-bottom-right-radius:2px;
+	background-color:#ffffff;
+	padding:23px
+}
+
+.header_bar {
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+.header_bar .logo {
+	float:left;
+}
+
+.header_bar .top_links {
+	float:right;
+	padding:6px;
+}
+
+.header_bar .top_links a {
+	color: #808080;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.header_bar .search_box {
+	float:right;
+}
+
+.header_bar .search_box input {
+	background:#fafafa;
+	height:28px;
+	width:258px;
+	border: 1px solid #c5c5c5;
+	border-radius:2px;
+	padding-left: 30px;
+	background: #fafafa url('../img/search.png') no-repeat 8px 8px;
+}
+
+.nav {
+	color:#8e989f;
+    font-weight: bold;
+    text-align: center;
+    background: url('../img/nav_bg.png') 0px 0px repeat-x;
+    box-shadow: 0px 2px 2px 0px #f6f6f6;
+    height:39px;
+    margin-bottom: 20px;
+    padding-top:1px;
+    padding-bottom:1px;
+    border-left: solid 1px #cacad2;
+    border-right: solid 1px #cacad2;
+    border-radius:2px;
+}
+
+.nav ul {
+	list-style:none;
+	padding:0px;
+	margin:0px;
+}
+
+.nav li { 
+	float:left;
+	display:block;
+	text-align:center;
+	position:relative;
+}
+
+.nav li.link {
+	padding: 10px;
+	height:19px;
+	cursor:pointer;
+	border-left: solid 1px #ffffff;
+}
+
+.nav li.spacer {
+	height:40px;
+	width:1px;
+	background:#cacad2;
+}
+
+.nav li:hover {
+	background: url('../img/nav-bg-hover.png') 0px 0px repeat-x;
+}
+
+.nav li.active {
+	color:#767f85;
+	background: url('../img/nav-bg-active.png') 0px 0px repeat-x;
+	border-left:0px;
+}
+
+.nav .right {
+	float:right;
+}
+
+.content {
+	min-height:100px;
+	min-width:600px;
+
+}
+
+.table {
+	clear:both;
+	display:table;
+
+	background-color: #fefeff;
+	border: solid 1px #cacad2;
+	border-radius:2px;
+}
+
+.table_header {
+	height:30px;
+	line-height:30px;
+	clear: both;
+	display: table-row;
+	border-right:1px solid #9498c3;
+	background: url('../img/header-bg.png') 0px 0px repeat-x;
+	line-height: 15px;
+	color:#8e989f;
+	font-weight: bold;
+}
+
+.table_header_cell {
+	float:none;
+	vertical-align: middle;
+	display: table-cell;
+	white-space: nowrap;
+	border-bottom: 1px solid #c2c4d4;
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+
+}
+
+.table_header_cell:hover {
+	cursor: pointer;
+	border-right: 1px solid #c2c4d4;
+	border-left: 1px solid #c2c4d4;
+	background: url('../img/header-bg-hover.png') 0px 0px repeat-x;
+}
+
+.table_header_cell.col_hover {
+	border-right: 1px solid #c2c4d4;
+	border-left: 1px solid #c2c4d4;
+}
+
+.table_header_cell span {
+	padding-right:15px;
+}
+
+.table_header_cell.sort_by span {
+	color:#dd8800;
+}
+
+.table_header_cell.sort_by.sort_asc span {
+	background: url('../img/sort_asc.png') 0px 0px no-repeat;
+	background-position: right 0px top 5px;
+}
+
+.table_header_cell.sort_by.sort_desc span {
+	background: url('../img/sort_desc.png') 0px 0px no-repeat;
+	background-position: right 0px top 5px;
+}
+
+
+.table_row {
+	height:30px;
+	line-height:30px;
+	clear: both;
+	display: table-row;
+}
+
+.table_row:hover {
+	background:#f0f0f0;
+}
+
+.table_row.table_header:hover {
+	background:#dfebf3;
+	cursor:pointer;
+}
+
+.table_cell {
+	float:none;
+	vertical-align: middle;
+	display: table-cell;
+	white-space: nowrap
+}
+
+.table_cell.col_hover {
+	background:#f0f0f0;
+}
+
+.table_cell.cell_hover {
+	background:#ece9e9;
+}
+
+.alpha {
+	min-width:136px;
+	padding-left: 11px;	
+	padding-right: 11px;	
+ 	text-align: left;
+}
+
+.numeric {
+	padding-left: 108px;
+	padding-right: 11px;	
+	text-align: right;
+}
+
+.positive {
+	color: green;
+}
+
+.negative {
+	color: red;
+}
+
+.odd {
+	background-color: #f8f8f8;
+}
+
+.wrap_loader {
+	background-color: #fefeff;
+	border: solid 1px #cacad2;
+	border-radius:2px;
+}
+
+.loader {
+	height: 33px;
+	width: 33px;
+	margin: 60px auto;
+	background: url('../img/ajax-loader.gif') no-repeat;
+}

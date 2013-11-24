@@ -80,7 +80,7 @@
 	color:#8e989f;
     font-weight: bold;
     text-align: center;
-    background: url('../img/nav_bg.png') 0px 0px repeat-x;
+    background: url('../img/nav-bg.png') 0px 0px repeat-x;
     box-shadow: 0px 2px 2px 0px #f6f6f6;
     height:39px;
     margin-bottom: 20px;
@@ -190,12 +190,12 @@
 }
 
 .table_header_cell.sort_by.sort_asc span {
-	background: url('../img/sort_asc.png') 0px 0px no-repeat;
+	background: url('../img/sort-asc.png') 0px 0px no-repeat;
 	background-position: right 0px top 5px;
 }
 
 .table_header_cell.sort_by.sort_desc span {
-	background: url('../img/sort_desc.png') 0px 0px no-repeat;
+	background: url('../img/sort-desc.png') 0px 0px no-repeat;
 	background-position: right 0px top 5px;
 }
 

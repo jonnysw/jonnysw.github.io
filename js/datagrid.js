@@ -42,7 +42,8 @@
 			table, header, body = '',
 			i, j,
 			row_type_class, data_type_class, pecentage_class,
-			sort_value, col_n;
+			sort_value, col_n,
+			data;
 
 		// build the table header
 		table = '<div class="table">';
@@ -84,10 +85,10 @@
 				sort_value =  feed_data[i+j].gs$cell.numericValue !== undefined ? feed_data[i+j].gs$cell.numericValue : data;
 				// check if we have the data is a percentage (and if it is positive or negative)
 				pecentage_class = checkPercentage(data);
-				// preserve trailing zeros at 2dp if neccassery (bit of a hack to get around google spread sheet issue,
-				// using the fact that the numericValue preseves trailing zeros to 1dp)
-				if (sort_value.match(/\.0$/)) {
-					data += ".00";
+				// if the data is numeric, then we want to add trailing zeros to 2db
+				// where google's feed has removed them
+				if (data_type_class == "numeric") {
+					data = formatNumbers(data);
 				}
 
 				// add everything to this cell
@@ -96,7 +97,7 @@
 			body += '</div>';
 		};
 
-		// put it all together
+		// bring it all together
 		table += header + body + '</div>';
 		return table;
 	}
@@ -124,6 +125,39 @@
 		} else {
 			return ""
 		}
+	}
+
+	/* 
+	 * Carry out basic checks on 'numeric' strings to check if 
+	 * they have 2 decimal places. If not, format the string as neccassery.
+	 *
+	 * Note: this is not comprehensive and will need to be extended
+	 * to support other formats (e.g other currencies)
+	 */
+	function formatNumbers(data) {
+
+		// look for numbers without any decimal places
+		if (data.match(/^[0-9]*$/)) {
+			return data += ".00";
+		}
+		// look for numbers with a single decimal place
+		if (data.match(/^[0-9]*\.[0-9]$/)) {
+			return data += "0";
+		}
+		// look for british currencies with out any decimal places
+		if (data.match(/^\xA3[0-9]*$/)) {
+			return data += ".00";
+		}
+		// look for precentages with no decimal places
+		if (data.match(/^[0-9]*\%$/)) {
+			return data.replace(/\%$/, ".00%");
+		}
+		// look for percentages with only a single decimal place
+		if (data.match(/\.[0-9]\%$/)) {
+			return data.replace(/\%$/, "0%");
+		}
+
+		return data;
 	}
 
 	/* 
